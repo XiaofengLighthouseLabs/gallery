@@ -1,0 +1,21 @@
+{
+  "name": "gallery",
+  "version": "1.0.0",
+  "description": "assignment1 gallery",
+  "main": "gallery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xiaofeng Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "client-sessions": "^0.8.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "fs": "0.0.1-security",
+    "mongodb": "^3.6.3",
+    "path": "^0.12.7",
+    "randomstring": "^1.1.5"
+  }
+}

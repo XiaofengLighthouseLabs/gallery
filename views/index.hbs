@@ -1,0 +1,62 @@
+{{!-- Xiaofeng Zhang --}}
+{{!-- Assignment3-gallery-index.hbs --}}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gallery-Web322-Assignment3-index</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    {{>header}}
+    <main>
+        <article class="post-data">
+            <h6>&nbsp;</h6>
+            <section class="form-data">
+                <h6>&nbsp;</h6>
+                <form method="POST" action="/gallery" class="image-title-group">
+                    <select id="image-title" name="imageTitle">
+                        <option disabled selected value></option>
+                        {{#each data.title}}
+                        <option value="{{this}}">{{this}}</option>
+                        {{/each}}
+                        <br />
+                    </select>
+                    <br />
+                    <br />
+                    <button type="submit" value="submit">Submit</button>
+                </form>
+            </section>
+
+
+            <section class="image-content">
+                <h6>&nbsp;</h6>
+                {{#if click}}
+                <form method="POST" action="/purchase">
+                    <input type="hidden" name="{{selection}}">
+                    <input id="inputImage" type="image" src="/images/{{selection}}.jpg" alt="NO IMAGE" />
+                </form>
+                {{else}}
+                <img src="/images/{{selection}}.jpg" alt="NO IMAGE">
+                {{/if}}
+            </section>
+            <section class="selected-image-title">
+                <h6>&nbsp;</h6>
+                {{selection}}
+            </section>
+
+            <section class="username-logout-section">
+                <h6>&nbsp;</h6>
+                <h3 id="username">{{username}}</h3>
+                <h3 id="logout"><a id="logout-link" href="/logout">Logout</a></h3>
+            </section>
+
+        </article>
+    </main>
+
+</body>
+
+</html>

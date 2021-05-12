@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gallery-Web322-Assignment3-imageDetail</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    {{>header}}
+    <main>
+        <article class="post-data">
+            <h6>&nbsp;</h6>
+            <section class="image-content">
+                <h6>&nbsp;</h6>
+                <img id="imageDetail" type="image" src="/images/{{selection}}.jpg" alt="NO IMAGE" />
+                <br />
+                <h3>{{selection}}</h3>
+                <h3>{{data.description}}</h3>
+                <h3>CAD:{{data.price}}</h3>
+                <br />
+                <br />
+                <form method="POST" action="/purchase/backFromPurchase" id="puchaseButtons">
+                    <button type="submit" name="buy" value="BUY{{selection}}"
+                        onclick="return confirm('SOLD!!!')">BUY</button>
+                    <button type="submit" name="cancel" value="CANCEL{{selection}}"
+                        onclick="return confirm('MAYBE NEXT TIME')">CANCEL</button>
+                </form>
+            </section>
+
+        </article>
+    </main>
+
+</body>
+
+</html>

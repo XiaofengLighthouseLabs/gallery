@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gallery-Web322-Assignment3-register</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    {{>header}}
+    <main>
+        <article class="register-content">
+            <h2>Account Registration</h2>
+            <section class="register-form">
+                <h6>&nbsp;</h6>
+                <form method="POST" action="/register" class="register-form-group">
+                    <br />
+                    <input id="txtUserName" type="email" name="textUserName" placeholder="Username" value="{{username}}"
+                        required="" />
+                    <br />
+                    <input id="txtPassword" type="password" name="textPassword" placeholder="Password"
+                        value="{{password}}" required="" />
+                    <br />
+                    <input id="txtConfirmPassword" type="password" name="textConfirmPassword"
+                        placeholder="Confirm Password" value="{{confirmpassword}}" required="" />
+                    <br />
+                    <button id="registerbtn" type="submit" value="submit">Register</button>
+                    <br />
+                </form>
+            </section>
+
+            <section class="error-msg">
+                {{#if errorMsg}}
+                <label id="lblMessage">
+                    {{errorMsg}}
+                </label>
+                {{/if}}
+            </section>
+        </article>
+    </main>
+
+</body>
+
+</html>

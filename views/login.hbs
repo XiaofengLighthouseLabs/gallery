@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Gallery-Web322-Assignment3-login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    {{>header}}
+    <main>
+        <article class="login-content">
+            <h2>Login</h2>
+            <section class="login-form">
+                <h6>&nbsp;</h6>
+                <form method="POST" action="/" class="login-form-group">
+                    <br />
+                    <input id="txtUserName" type="email" name="textUserName" placeholder="Username" value="{{username}}"
+                        required="" />
+                    <br />
+                    <input id="txtPassword" type="password" name="textPassword" placeholder="Password"
+                        value="{{password}}" required="" />
+                    <br />
+                    <button id="loginbtn" type="submit" value="submit">Submit</button>
+                    <br />
+                    <a id="register" href="/register">Register</a>
+                    <br />
+                </form>
+            </section>
+
+            <section class="error-msg">
+                {{#if errorMsg}}
+                <label id="lblMessage">
+                    {{errorMsg}}
+                </label>
+                {{/if}}
+            </section>
+        </article>
+    </main>
+
+</body>
+
+</html>
